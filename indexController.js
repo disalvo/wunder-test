@@ -26,6 +26,7 @@ angular.module('app')
 			template: "success-page.html"
 		},
 	];
+	vm.paymentDataId = null;
 
 	vm.init = function () {
 		vm.currentStep = ($window.localStorage.getItem('actualStep') !== null)
@@ -62,17 +63,15 @@ angular.module('app')
 	vm.save = () => {
 		UserService.Register(vm.user).then(
 			(r) => {
-				vm.successPage();
+				vm.paymentDataId = r.paymentDataId;
+				vm.gotoStep(4);
+				vm.user = {};
+				$window.localStorage.removeItem('actualStep');
+				$window.localStorage.removeItem('userData');
 			},
 			(r) => {
 				toaster.error('Error!', 'Something went wrong, please try again.');
 			});
-	};
-
-	vm.successPage = () => {
-		vm.user = {};
-		$window.localStorage.removeItem('actualStep');
-		$window.localStorage.removeItemł('userData');
 	};
 
 	vm.init();

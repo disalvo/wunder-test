@@ -15,9 +15,6 @@
 
 					<h1>Wunder Take Home Test</h1>
 					<div id="wizard-container">
-
-						<pre>{{vm.user | json}}</pre>
-
 						<div id="wizard-step-container">
 							<ul class="nav nav-pills nav-justified">
 								<li ng-repeat="step in vm.steps" ng-class="{'active':step.step == vm.currentStep}"><a ng-click="javascript.void(0)" href="">{{step.name}}</a></li>

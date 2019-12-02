@@ -1,12 +1,12 @@
 <form ng-submit="vm.save()">
     <div class="form-group">
         <label>Account owner</label>
-        <input type="text" class="form-control" name="accountOwner" ng-model="vm.user.accountOwner" required />
+        <input type="text" class="form-control" name="accountOwner" ng-model="vm.user.accountOwner" required maxlength="150" />
     </div>
 
     <div class="form-group">
         <label>IBAN</label>
-        <input type="text" class="form-control" name="iban" ng-model="vm.user.iban" required />
+        <input type="text" class="form-control" name="iban" ng-model="vm.user.iban" required maxlength="32" />
     </div>
 
     <div id="wizard-navigation-container">

@@ -3,9 +3,9 @@ Wunder Test
 
 ## Installation
 * `git clone <repository-url>` this repository
-* change into the new directory
+* Change into the new directory
 * Copy `config.js.default` to `config.js`
-* Edit file `config.js` and configure the `API_URL` constant (Example http:\\localhost:3000/api/v1/)
+* Edit file `config.js` and configure the `API_URL` constant (Example [http:\\localhost:3000/api/v1/])
 
 
 ### 1. Describe possible performance optimizations for your Code.
