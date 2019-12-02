@@ -8,11 +8,11 @@
         <label>IBAN</label>
         <input type="text" class="form-control" name="iban" ng-model="vm.user.iban" required />
     </div>
-</form>
 
-<div id="wizard-navigation-container">
-    <div class="pull-right">
-        <button class="btn btn-default" name="previous" type="button" ng-click="vm.gotoStep(2)"><i class="fa fa-arrow-left"></i> Previous step</button>
-        <button class="btn btn-success" name="next" type="submit"> <i class="fa fa-floppy-o"></i> Save</button>
+    <div id="wizard-navigation-container">
+        <div class="pull-right">
+            <button class="btn btn-default" name="previous" type="button" ng-click="vm.gotoStep(2)"><i class="fa fa-arrow-left"></i> Previous</button>
+            <button class="btn btn-primary" name="next" type="submit">Next <i class="fa fa-arrow-right"></i></button>
+        </div>
     </div>
-</div>
+</form>

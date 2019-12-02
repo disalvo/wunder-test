@@ -1,27 +1,27 @@
 <form ng-submit="vm.gotoStep(3)">
     <div class="form-group">
         <label>Address (including street)</label>
-        <input type="text" class="form-control" name="address" ng-model="vm.user.address" required />
+        <input type="text" class="form-control" name="address" ng-model="vm.user.address" required maxlength="255" />
     </div>
 
     <div class="form-group">
         <label>House number</label>
-        <input type="text" class="form-control" name="houseNumber" ng-model="vm.user.houseNumber" required />
+        <input type="number" class="form-control" name="houseNumber" ng-model="vm.user.houseNumber" required  maxlength="10" />
     </div>
 
     <div class="form-group">
         <label>Zip Code</label>
-        <input type="text" class="form-control" name="zipcode" ng-model="vm.user.zipcode" required />
+        <input type="number" class="form-control" name="zipcode" ng-model="vm.user.zipcode" required maxlength="20" />
     </div>
 
     <div class="form-group">
         <label>City</label>
-        <input type="text" class="form-control" name="city" ng-model="vm.user.city" required />
+        <input type="text" class="form-control" name="city" ng-model="vm.user.city" required maxlength="100" />
     </div>
     <div id="wizard-navigation-container">
         <div class="pull-right">
-            <button class="btn btn-default" name="previous" type="button" ng-click="vm.gotoStep(1)"><i class="fa fa-arrow-left"></i> Previous step</button>
-            <button class="btn btn-primary" name="next" type="submit">Next step <i class="fa fa-arrow-right"></i></button>
+            <button class="btn btn-default" name="previous" type="button" ng-click="vm.gotoStep(1)"><i class="fa fa-arrow-left"></i> Previous</button>
+            <button class="btn btn-primary" name="next" type="submit">Next <i class="fa fa-arrow-right"></i></button>
         </div>
     </div>
 </form>
