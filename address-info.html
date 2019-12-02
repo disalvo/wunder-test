@@ -1,0 +1,27 @@
+<form ng-submit="vm.gotoStep(3)">
+    <div class="form-group">
+        <label>Address (including street)</label>
+        <input type="text" class="form-control" name="address" ng-model="vm.user.address" required />
+    </div>
+
+    <div class="form-group">
+        <label>House number</label>
+        <input type="text" class="form-control" name="houseNumber" ng-model="vm.user.houseNumber" required />
+    </div>
+
+    <div class="form-group">
+        <label>Zip Code</label>
+        <input type="text" class="form-control" name="zipcode" ng-model="vm.user.zipcode" required />
+    </div>
+
+    <div class="form-group">
+        <label>City</label>
+        <input type="text" class="form-control" name="city" ng-model="vm.user.city" required />
+    </div>
+    <div id="wizard-navigation-container">
+        <div class="pull-right">
+            <button class="btn btn-default" name="previous" type="button" ng-click="vm.gotoStep(1)"><i class="fa fa-arrow-left"></i> Previous step</button>
+            <button class="btn btn-primary" name="next" type="submit">Next step <i class="fa fa-arrow-right"></i></button>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<title>Wunder Take Home Test</title>
+
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" rel="stylesheet" data-semver="3.3.6" data-require="bootstrap-css@3.3.6" />
+		<link data-require="fontawesome@4.5.0" data-semver="4.5.0" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.css" />
+		<link rel="stylesheet" href="style.css">
+
+	</head>	
+	<body ng-app="app" ng-controller="AppCtrl as vm">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+
+					<h1>Wunder Take Home Test</h1>
+					<div id="wizard-container">
+
+						<div id="wizard-step-container">
+							<ul class="nav nav-pills nav-justified">
+								<li ng-repeat="step in vm.steps" ng-class="{'active':step.step == vm.currentStep}"><a ng-click="vm.gotoStep(step.step)" href="">{{step.step}}. {{step.name}}</a></li>
+							</ul>
+						</div>
+
+						<div id="wizard-content-container">
+							<ng-include src="vm.getStepTemplate()"></ng-include>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Library code. -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js" type="text/javascript"></script>
+
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+				integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+				crossorigin="anonymous"></script>
+
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" data-semver="3.3.6" data-require="bootstrap@3.3.6"></script>
+		<!-- App code. -->
+		<script src="app.js" type="text/javascript"></script>
+	</body>
+</html>
